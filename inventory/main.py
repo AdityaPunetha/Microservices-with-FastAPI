@@ -66,3 +66,6 @@ async def get_product(pk: str):
 @app.delete("/products/{pk}")
 async def delete_product(pk: str):
     return Product.delete(pk)
+
+
+# uvicorn inventory.main:app --reload

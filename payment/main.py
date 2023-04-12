@@ -69,3 +69,6 @@ def order_completed(order: Order):
     order.status = "completed"
     order.save()
     redis.xadd("order_completed", order.dict(), "*")
+
+
+# uvicorn payment.main:app --reload --port=8001
